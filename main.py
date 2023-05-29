@@ -1,10 +1,10 @@
 from generate_insta_post import generate_instagram_post
-from labs import select_lab
-from description import get_description
-from datetime_picker import get_date_and_hour
-from location import select_location
-from classroom import enter_classroom
-from name import get_event_name
+from workshop_information.labs import select_lab
+from workshop_information.description import get_description
+from workshop_information.datetime_picker import get_date_and_hour
+from workshop_information.location import select_location
+from workshop_information.classroom import enter_classroom
+from workshop_information.name import get_event_name
 from send_email.to_garage import send_email_to_garage
 from send_email.to_geny import send_email_to_geny
 
