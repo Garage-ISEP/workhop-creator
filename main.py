@@ -1,4 +1,5 @@
-from generate_insta_post import generate_instagram_post
+from generation.generate_insta_post import generate_instagram_post
+from send_email.store_to_notion import create_event_notion
 from workshop_information.labs import select_lab
 from workshop_information.description import get_description
 from workshop_information.datetime_picker import get_date_and_hour
@@ -35,9 +36,13 @@ def main():
                 confirmation = input("Do you want to send the email? (yes/no): ")
                 if confirmation.lower() == "yes":
                     # Send email to Geny
-                    send_email_to_geny(lab, event_name, classroom, location)
+                    #send_email_to_geny(lab, event_name, classroom, location)
                     # Send email to Garage
-                    send_email_to_garage(description)
+                    #send_email_to_garage(description)
+
+                    #Store to notion
+                    create_event_notion(name=event_name, lab=lab, date=date, hour=hour, location=location, description=description)
+
                     print("Emails sent successfully.")
                     break
                 elif confirmation.lower() == "no":

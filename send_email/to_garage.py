@@ -1,8 +1,7 @@
-import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-from generate_event_description import generate_text
+from generation.generate_event_description import generate_text
 
 
 def send_email_to_garage(description):

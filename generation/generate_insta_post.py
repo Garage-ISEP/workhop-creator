@@ -10,7 +10,8 @@ def generate_instagram_post(event_name, lab, description, date, hour, location, 
     description = "\n".join(lines)
 
     # Generate the image with the post content
-    image_path = os.path.join("assets",f"{lab}.png")
+    image_path = os.path.join(f"assets/{lab}.png")
+    print(image_path)
     img = Image.open(image_path)
     draw = ImageDraw.Draw(img)
     title_font = ImageFont.truetype("fonts/LeagueSpartan-Bold.ttf", 50)
@@ -21,9 +22,10 @@ def generate_instagram_post(event_name, lab, description, date, hour, location, 
     draw.text((450, 950), f"{location} - {classroom}", fill=(255, 255, 255), font=desc_font)
 
     # Save the generated image
-    post_image_path = "output/generated_post.png"
+    post_image_path = f"output/{lab}_{date}_post.png"
     img.save(post_image_path)
     print("Instagram post generated!")
 
     # Display the image
     img.show()
+#generate_instagram_post("hell", "Cyber", "kjzvbe", "2 SEP", "18h", "NZ9", "NDL")

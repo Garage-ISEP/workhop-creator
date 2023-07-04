@@ -1,6 +1,5 @@
 def select_lab():
-    LABS = ['🤖IA', '🛡️Cyber', '💻Coder', '🕶️Meta', '🔗Blockchain', '🛠️Maker']
-
+    LABS = ['IA', '️Cyber', 'Coder', 'Meta', 'Blockchain', 'Maker']
     print("Select a lab:")
     for i, lab in enumerate(LABS, 1):
         print(f"{i}. {lab}")
